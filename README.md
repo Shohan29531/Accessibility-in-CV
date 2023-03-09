@@ -1,4 +1,4 @@
-This project is created directly from another: https://github.com/allenai/gpv-1/
+This project is created directly from another repository (https://github.com/allenai/gpv-1/)
 
 # Running the Project
 
