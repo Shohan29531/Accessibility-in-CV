@@ -1,0 +1,9 @@
+*.pyc
+*__pycache__*
+outputs*
+output*
+output_gpv*
+data*
+data_gpv*
+.vscode
+.ipynb_checkpoints

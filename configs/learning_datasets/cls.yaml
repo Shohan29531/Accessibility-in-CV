@@ -1,0 +1,4 @@
+# @package _group_
+CocoClassification:
+  task_config: coco_classification
+  name: coco_cls

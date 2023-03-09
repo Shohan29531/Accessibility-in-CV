@@ -1,0 +1,68 @@
+Accent Paving
+Barrier Post
+Barrier Stump
+Bench
+Bridge
+Bus
+Bus Stop
+Chair
+Closed Sidewalk
+Counter
+Curb
+Different Labels 
+Driveaway
+Elevator
+Escalator
+Fence
+Flush Door
+Foldout Sign
+Fountain
+Gate
+Gutter
+Hose
+Lamp Post
+Large Curb
+Mail bin
+Maintenance Vehicle
+Motorcycle
+Parallel Parking Spot
+Parked car
+Pillar
+Pole
+Puddle
+Railing
+Raised Entryway
+Retaining Wall
+Road Divider
+Road Shoulder
+Roadside Parking
+Sidewalk pits 
+Sign Post
+Sloped Driveway
+Slopped Curb
+Snow
+Stairs
+Stone Block
+Street Vendor
+Table
+Tactile Paving
+Traffic Signals
+Train Platform
+Train Tracks
+Trash bins
+Trash on roads
+Tree Branch
+Trees 
+Turnstile
+Uncontrolled Crossing
+Uneven Stairs
+Unpaved Road
+Unpaved Sidewalk
+Wall
+Water leakage
+Water Pipes
+Yard Waste
+Zebra Crossing
+Sign
+Pedestrian Crossing
+White Cane

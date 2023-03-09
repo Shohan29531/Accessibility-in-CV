@@ -1,0 +1,4 @@
+# @package _group_
+CocoCaptioning:
+  task_config: coco_captioning
+  name: coco_cap
