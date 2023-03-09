@@ -73,7 +73,6 @@ update your <data_dir> and <output_dir> addresses in four files inside the proje
 3. configs/exp/gpv_inference.yaml
 4. configs/exp/gpv.yaml
 
-
 12.
 Open the inference.ipynb file and copy all the codes (in the order they appear in the .ipynb file) into a python file (say, inference_notebook.py)
 
