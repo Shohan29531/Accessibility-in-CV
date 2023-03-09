@@ -1,7 +1,8 @@
+This project is created directly from another: https://github.com/allenai/gpv-1/
+
 # Running the Project
 
-
-##1. 
+1. 
 A Clean installation of Ubuntu 22.04 is preferred.
 2. 
 Install git (sudo apt install git-all).
