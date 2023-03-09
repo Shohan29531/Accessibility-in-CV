@@ -12,11 +12,11 @@ import math
 from exp.gpv.models.gpv import GPV
 from utils.detr_misc import collate_fn
 from inference_util import *
-import my_utils.utility
+import a11y_utils.utility
 
 
 
-my_output_dir = "/home/touhid/Desktop/gpv-1/my_outputs/"
+my_output_dir = "/home/touhid/Desktop/gpv-1/a11y_testing_outputs/"
 batch_size = 4
 
 start_time = time.time()
