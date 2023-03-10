@@ -1,0 +1,69 @@
+Question,GPV-1 Prediction,Ground Truth
+Is there a/an Accent Paving in the scene?,yes,-1
+Is there a/an Barrier Post in the scene?,yes,-1
+Is there a/an Barrier Stump in the scene?,yes,-1
+Is there a/an Bench in the scene?,no,-1
+Is there a/an Bridge in the scene?,yes,-1
+Is there a/an Bus in the scene?,no,-1
+Is there a/an Bus Stop in the scene?,no,-1
+Is there a/an Chair in the scene?,no,-1
+Is there a/an Closed Sidewalk in the scene?,yes,-1
+Is there a/an Counter in the scene?,no,-1
+Is there a/an Curb in the scene?,yes,-1
+Is there a/an Different Labels in the scene?,no,-1
+Is there a/an Driveaway in the scene?,no,-1
+Is there a/an Elevator in the scene?,no,-1
+Is there a/an Escalator in the scene?,yes,-1
+Is there a/an Fence in the scene?,yes,-1
+Is there a/an Flush Door in the scene?,no,-1
+Is there a/an Foldout Sign in the scene?,no,-1
+Is there a/an Fountain in the scene?,no,-1
+Is there a/an Gate in the scene?,yes,-1
+Is there a/an Gutter in the scene?,yes,-1
+Is there a/an Hose in the scene?,yes,-1
+Is there a/an Lamp Post in the scene?,yes,-1
+Is there a/an Large Curb in the scene?,no,-1
+Is there a/an Mail bin in the scene?,yes,-1
+Is there a/an Maintenance Vehicle in the scene?,no,-1
+Is there a/an Motorcycle in the scene?,no,-1
+Is there a/an Parallel Parking Spot in the scene?,no,-1
+Is there a/an Parked car in the scene?,no,-1
+Is there a/an Pillar in the scene?,yes,-1
+Is there a/an Pole in the scene?,yes,-1
+Is there a/an Puddle in the scene?,no,-1
+Is there a/an Railing in the scene?,yes,-1
+Is there a/an Raised Entryway in the scene?,no,-1
+Is there a/an Retaining Wall in the scene?,yes,-1
+Is there a/an Road Divider in the scene?,no,-1
+Is there a/an Road Shoulder in the scene?,no,-1
+Is there a/an Roadside Parking in the scene?,no,-1
+Is there a/an Sidewalk pits in the scene?,yes,-1
+Is there a/an Sign Post in the scene?,yes,-1
+Is there a/an Sloped Driveway in the scene?,no,-1
+Is there a/an Slopped Curb in the scene?,yes,-1
+Is there a/an Snow in the scene?,no,-1
+Is there a/an Stairs in the scene?,no,-1
+Is there a/an Stone Block in the scene?,yes,-1
+Is there a/an Street Vendor in the scene?,yes,-1
+Is there a/an Table in the scene?,no,-1
+Is there a/an Tactile Paving in the scene?,yes,-1
+Is there a/an Traffic Signals in the scene?,no,-1
+Is there a/an Train Platform in the scene?,no,-1
+Is there a/an Train Tracks in the scene?,no,-1
+Is there a/an Trash bins in the scene?,no,-1
+Is there a/an Trash on roads in the scene?,no,-1
+Is there a/an Tree Branch in the scene?,no,-1
+Is there a/an Trees in the scene?,no,-1
+Is there a/an Turnstile in the scene?,yes,-1
+Is there a/an Uncontrolled Crossing in the scene?,no,-1
+Is there a/an Uneven Stairs in the scene?,no,-1
+Is there a/an Unpaved Road in the scene?,no,-1
+Is there a/an Unpaved Sidewalk in the scene?,yes,-1
+Is there a/an Wall in the scene?,yes,-1
+Is there a/an Water leakage in the scene?,no,-1
+Is there a/an Water Pipes in the scene?,yes,-1
+Is there a/an Yard Waste in the scene?,no,-1
+Is there a/an Zebra Crossing in the scene?,no,-1
+Is there a/an Sign in the scene?,no,-1
+Is there a/an Pedestrian Crossing in the scene?,yes,-1
+Is there a/an White Cane in the scene?,yes,-1

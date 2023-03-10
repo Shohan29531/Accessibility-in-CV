@@ -8,39 +8,13 @@ from nltk.tokenize.treebank import TreebankWordDetokenizer
 
 import time
 import math
+import sys
+import csv
 
 from exp.gpv.models.gpv import GPV
 from utils.detr_misc import collate_fn
 from inference_util import *
-import a11y_utils.utility
-
-
-
-my_output_dir = "/home/touhid/Desktop/gpv-1/a11y_testing_outputs/"
-batch_size = 4
-
-start_time = time.time()
-
-with initialize(config_path='configs',job_name='inference'):
-    cfg = compose(config_name='exp/gpv_inference')
-
-
-model = GPV(cfg.model).cuda().eval()
-loaded_dict = torch.load(cfg.ckpt, map_location='cuda:0')['model']
-state_dict = model.state_dict()
-for k,v in state_dict.items():
-    state_dict[k] = loaded_dict[f'module.{k}']
-    state_dict[k].requires_grad = False
-model.load_state_dict(state_dict)
-
-
-transforms = T.Compose([
-    T.ToPILImage(mode='RGB'),
-    T.ToTensor(),
-    T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
-
-
-
+from a11y_utils import utility
 
 
 def preprocess(inputs,transforms):
@@ -52,10 +26,6 @@ def preprocess(inputs,transforms):
         proc_inputs.append((proc_img,query))
     
     return collate_fn(proc_inputs)
-
-
-
-
 
 
 def decode_outputs(outputs):
@@ -88,49 +58,78 @@ def decode_outputs(outputs):
 
 
 
-# img1,_ = read_image('assets/busy_street.png',resize_image=True)
-# img2,_ = read_image('assets/white_horse.png',resize_image=True)
+if __name__=="__main__":
 
-# imshow((255*img1[:,:,::-1]).astype(np.uint8)) # scale pixel values, RGB to BGR (because imshow uses opencv), and convert to uint8
-# imshow((255*img2[:,:,::-1]).astype(np.uint8))
+    start_time = time.time()
 
+    my_output_dir = "a11y_testing_outputs/"
+    input_dir = "assets/"
 
+    batch_size = 4
 
-inputs = [
-    ('assets/2.jpeg','is there a wall?'),
-    ('assets/2.jpeg','is there a sign?'),
-    ('assets/2.jpeg','is there a parallel parking spot?'),
-    ('assets/ex.jpg','is there a stop sign?'),
-    ('assets/blind.jpeg','is there a person with disability?'),
-    ('assets/blind.jpeg','is there a white cane?'),
-    ('assets/blind.jpeg','is there a blind person?'),
-    ('assets/blind.jpeg','is there a white cane?'),
-]
+    with initialize(config_path='configs',job_name='inference'):
+        cfg = compose(config_name='exp/gpv_inference')
 
 
+    model = GPV(cfg.model).cuda().eval()
+    loaded_dict = torch.load(cfg.ckpt, map_location='cuda:0')['model']
+    state_dict = model.state_dict()
+    for k,v in state_dict.items():
+        state_dict[k] = loaded_dict[f'module.{k}']
+        state_dict[k].requires_grad = False
+    model.load_state_dict(state_dict)
 
 
-number_of_inputs = len( inputs )
-
-required_iterations = math.ceil( number_of_inputs / batch_size )
-
-for i in range( required_iterations ):
-    input_batch = inputs[ i * batch_size : ( i + 1 ) * batch_size ]
-    images, queries = preprocess( input_batch, transforms )
-    output_batch = model( images, queries, None)
-    predictions = decode_outputs( output_batch )
-
-    for j in range( len(input_batch) ):
-        img_path, query = input_batch[j]
-        prediction = predictions[j]
-
-        vis_img = vis_sample( img_path, prediction, 5 )
-        print( '-' * 80 )
-        print( f'Query { i * batch_size + j + 1 }:', query )
-        print( f'Ans:', prediction[ 'answer' ] )
-
-        cv2.imwrite( my_output_dir + "output_" + str(j) + ".png", vis_img )
+    transforms = T.Compose([
+        T.ToPILImage(mode='RGB'),
+        T.ToTensor(),
+        T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
 
 
-print( time.time() - start_time, end = "")
-print( " seconds" )    
+
+    input_file = sys.argv[1]
+    a11y_questions = utility.get_a11y_questions( 'a11y_questions_of_interest.txt' )
+
+    with open(my_output_dir + input_file.split('.')[0] + ".csv", "a") as csv_file:
+        csvwriter = csv.writer( csv_file, delimiter=',')
+        csvwriter.writerow( [ 'Question', 'GPV-1 Prediction', 'Ground Truth'] )
+
+    inputs = []
+
+    for a11y_question in a11y_questions:
+        inputs.append( ( input_dir + input_file, a11y_question ) )
+
+    required_iterations = math.ceil( len( inputs ) / batch_size )
+
+    for i in range( required_iterations ):
+        input_batch = inputs[ i * batch_size : ( i + 1 ) * batch_size ]
+        images, queries = preprocess( input_batch, transforms )
+        output_batch = model( images, queries, None)
+        predictions = decode_outputs( output_batch )
+
+        for j in range( len(input_batch) ):
+            img_path, query = input_batch[j]
+            prediction = predictions[j]
+
+            vis_img = vis_sample( img_path, prediction, 5 )
+            # print( '-' * 80 )
+            print( i* batch_size + j + 1)
+            # print( f'Ans:', prediction[ 'answer' ] )
+
+            # cv2.imwrite( my_output_dir + "output_" + str(j) + ".png", vis_img )
+
+            with open(my_output_dir + input_file.split('.')[0] + ".csv", "a") as csv_file:
+                csvwriter = csv.writer( csv_file, delimiter=',')
+                csvwriter.writerow( [ a11y_questions[ i * batch_size + j ], prediction[ 'answer' ], "-1"] )
+
+
+    print( time.time() - start_time, end = "")
+    print( " seconds" )    
+
+
+
+
+
+
+
+    

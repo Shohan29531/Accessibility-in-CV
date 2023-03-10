@@ -1,68 +1,89 @@
-Is there a/an Accent Paving in the scene?
-Is there a/an Barrier Post in the scene?
-Is there a/an Barrier Stump in the scene?
-Is there a/an Bench in the scene?
-Is there a/an Bridge in the scene?
-Is there a/an Bus in the scene?
-Is there a/an Bus Stop in the scene?
-Is there a/an Chair in the scene?
-Is there a/an Closed Sidewalk in the scene?
-Is there a/an Counter in the scene?
-Is there a/an Curb in the scene?
-Is there a/an Different Labels in the scene?
-Is there a/an Driveaway in the scene?
-Is there a/an Elevator in the scene?
-Is there a/an Escalator in the scene?
-Is there a/an Fence in the scene?
-Is there a/an Flush Door in the scene?
-Is there a/an Foldout Sign in the scene?
-Is there a/an Fountain in the scene?
-Is there a/an Gate in the scene?
-Is there a/an Gutter in the scene?
-Is there a/an Hose in the scene?
-Is there a/an Lamp Post in the scene?
-Is there a/an Large Curb in the scene?
-Is there a/an Mail bin in the scene?
-Is there a/an Maintenance Vehicle in the scene?
-Is there a/an Motorcycle in the scene?
-Is there a/an Parallel Parking Spot in the scene?
-Is there a/an Parked car in the scene?
-Is there a/an Pillar in the scene?
-Is there a/an Pole in the scene?
-Is there a/an Puddle in the scene?
-Is there a/an Railing in the scene?
-Is there a/an Raised Entryway in the scene?
-Is there a/an Retaining Wall in the scene?
-Is there a/an Road Divider in the scene?
-Is there a/an Road Shoulder in the scene?
-Is there a/an Roadside Parking in the scene?
-Is there a/an Sidewalk pits in the scene?
-Is there a/an Sign Post in the scene?
-Is there a/an Sloped Driveway in the scene?
-Is there a/an Slopped Curb in the scene?
-Is there a/an Snow in the scene?
-Is there a/an Stairs in the scene?
-Is there a/an Stone Block in the scene?
-Is there a/an Street Vendor in the scene?
-Is there a/an Table in the scene?
-Is there a/an Tactile Paving in the scene?
-Is there a/an Traffic Signals in the scene?
-Is there a/an Train Platform in the scene?
-Is there a/an Train Tracks in the scene?
-Is there a/an Trash bins in the scene?
-Is there a/an Trash on roads in the scene?
-Is there a/an Tree Branch in the scene?
-Is there a/an Trees in the scene?
-Is there a/an Turnstile in the scene?
-Is there a/an Uncontrolled Crossing in the scene?
-Is there a/an Uneven Stairs in the scene?
-Is there a/an Unpaved Road in the scene?
-Is there a/an Unpaved Sidewalk in the scene?
-Is there a/an Wall in the scene?
-Is there a/an Water leakage in the scene?
-Is there a/an Water Pipes in the scene?
-Is there a/an Yard Waste in the scene?
-Is there a/an Zebra Crossing in the scene?
-Is there a/an Sign in the scene?
-Is there a/an Pedestrian Crossing in the scene?
-Is there a/an White Cane in the scene?
+Is there an Accent Paving in the scene?
+Is there a Barrier Post in the scene?
+Is there a Barrier Stump in the scene?
+Is there a Bench in the scene?
+Is there a Bridge in the scene?
+Is there a Bus in the scene?
+Is there a Bus Stop in the scene?
+Is there a Chair in the scene?
+Is there a Closed Sidewalk in the scene?
+Is there a Counter in the scene?
+Is there a Curb in the scene?
+Are there Different Labels in the scene?
+Is there a Driveaway in the scene?
+Is there an Elevator in the scene?
+Is there an Escalator in the scene?
+Is there a Fence in the scene?
+Is there a Flush Door in the scene?
+Is there a Foldout Sign in the scene?
+Is there a Fountain in the scene?
+Is there a Gate in the scene?
+Is there a Gutter in the scene?
+Is there a Hose in the scene?
+Is there a Lamp Post in the scene?
+Is there a Large Curb in the scene?
+Is there a Mail bin in the scene?
+Is there a Maintenance Vehicle on the scene?
+Is there a Motorcycle in the scene?
+Is there a Parallel Parking Spot in the scene?
+Is there a Parked car on the scene?
+Is there a Pillar in the scene?
+Is there a Pole in the scene?
+Is there a Puddle in the scene?
+Is there a Railing in the scene?
+Is there a Raised Entryway in the scene?
+Is there a Retaining Wall in the scene?
+Is there a Road Divider in the scene?
+Is there a Road Shoulder in the scene?
+Is there Roadside Parking on the scene?
+Is there a Sidewalk pit in the scene?
+Is there a Sign Post in the scene?
+Is there a Sloped Driveway in the scene?
+Is there a Slopped Curb in the scene?
+Is there any Snow in the scene?
+Are there Stairs in the scene?
+Is there a Stone Block in the scene?
+Is there a Street Vendor on the scene?
+Is there a Table in the scene?
+Is there Tactile Paving in the scene?
+Is there a Traffic signal on the scene?
+Is there a Train Platform in the scene?
+Are there Train Tracks in the scene?
+Is there a Trash bin on the scene?
+Is there Trash on roads on the scene?
+Is there a Tree Branch in the scene?
+Is there a Tree in the scene?
+Is there a Turnstile in the scene?
+Is there an Uncontrolled Crossing in the scene?
+Are there Uneven Stairs in the scene?
+Is there an Unpaved Road in the scene?
+Is there an Unpaved Sidewalk in the scene?
+Is there a Wall in the scene?
+Is there any Wall bordering the sidewalk?
+Is there a Water leakage in the scene?
+Are there Water Pipes in the scene?
+Is there any wet surface in the scene?
+Is there Yard Waste in the scene?
+Is there a Zebra Crossing in the scene?
+Is there a Sign in the scene?
+Is there a Pedestrian Crossing on the scene?
+Is there a White Cane in the scene?
+Is there any person with a disability?
+What type of disability does the person have, if any?
+Is there a Crosswalk in the scene?
+Is there a Sidewalk in the scene?
+Is there a Fire hydrant on the scene?
+Is there a Lamppost in the scene?
+Is there a Bus Stop in the scene?
+Is there a Push button on the scene?
+What is the weather like in the scene?
+Is there any wheelchair in the scene?
+Is there any guide dog in the scene?  
+Is there any dog in the scene?
+Is there any paratransit vehicle on the scene?
+Is it a day in the scene?
+Is it a night in the scene?
+Is there any greenery in the scene?
+Is there anyone jaywalking in the scene?
+How many males are there in the scene?
+How many females are there in the scene?
