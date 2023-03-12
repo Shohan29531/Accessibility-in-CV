@@ -10,7 +10,7 @@ Is there a Closed Sidewalk in the scene?
 Is there a Counter in the scene?
 Is there a Curb in the scene?
 Are there Different Labels in the scene?
-Is there a Driveaway in the scene?
+Is there a Driveway in the scene?
 Is there an Elevator in the scene?
 Is there an Escalator in the scene?
 Is there a Fence in the scene?
@@ -87,3 +87,5 @@ Is there any greenery in the scene?
 Is there anyone jaywalking in the scene?
 How many males are there in the scene?
 How many females are there in the scene?
+Is there any obstacle on the sidewalk?
+Is there any obstacle on the street?
