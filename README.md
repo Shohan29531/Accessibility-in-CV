@@ -13,6 +13,7 @@ Install git (sudo apt install git-all).
 3. 
 Intsall NVIDIA and CUDA drivers from the "Software & Updates" app (I used v525 Proprietary), 
 DO NOT PERFORM THIS INSTALLATION ANY OTHER WAY (FROM TERMINAL OR SOMETHING)
+
 Restart the computer
 
 4. 
