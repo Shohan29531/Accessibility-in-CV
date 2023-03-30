@@ -19,16 +19,6 @@ from a11y_utils import utility
 
 
 
-
-
-# print( input_names_without_extension )
-# print( len(input_names) )
-
-
-
-
-
-
 def preprocess(inputs,transforms):
     proc_inputs = []
     for img_path, query in inputs:
@@ -82,9 +72,9 @@ if __name__=="__main__":
         input_names_full_path.append( filename )
         tokens = filename.split('/')
         file = tokens[ len(tokens) - 1 ]
-        input_names.append( file )
+        input_names.append( file ) 
 
-    my_output_dir = "/home/touhid/Downloads/acss_videos_elena_outputs/"
+    my_output_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_v2/"
 
     batch_size = 4
 
@@ -113,11 +103,14 @@ if __name__=="__main__":
     for item in range( len(input_names) ):
         print( "Currently Processing " + str( item + 1 ) )  
         input_file = input_names[ item ]
+
         a11y_questions = utility.get_a11y_questions( 'a11y_questions_of_interest.txt' )
+
+        a11y_objects = utility.get_a11y_objects( 'a11y_objects_of_interest.txt' )
 
         with open( my_output_dir + input_file.split('.')[0] + ".csv", "a") as csv_file:
             csvwriter = csv.writer( csv_file, delimiter=',')
-            csvwriter.writerow( [ 'Question', 'GPV-1 Prediction', 'Ground Truth'] )
+            csvwriter.writerow( [ 'Object', 'GPV-1 Prediction', 'Ground Truth'] )
 
         inputs = []
 
@@ -147,7 +140,7 @@ if __name__=="__main__":
                         flag = "0"                       
                         
 
-                    csvwriter.writerow( [ a11y_questions[ i * batch_size + j ], flag, "0"] )
+                    csvwriter.writerow( [ a11y_objects[ i * batch_size + j ], flag, "0"] )
 
         print( time.time() - start_time, end = "")
         print( " seconds" ) 

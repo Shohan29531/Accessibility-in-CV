@@ -5,7 +5,7 @@ import pandas as pd
 from natsort import natsorted
 
 
-root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_by_group_v2/"
+root_dir = "/home/touhid/Downloads/Ground_Truth_Annotation/"
 
 csv_filenames = []
 csv_filenames_full_path = []
@@ -16,6 +16,7 @@ for filename in glob.iglob(root_dir + '**/*.csv', recursive=True):
         csv_filenames.append( file )
 
 csv_filenames = natsorted( csv_filenames )
+# print(csv_filenames)
 
 for k in csv_filenames:
-        print( 'Rscript heatmap.R ' + '"' + k + '"' )
+        print( 'Rscript GT_heatmap.R ' + '"' + k + '"' )

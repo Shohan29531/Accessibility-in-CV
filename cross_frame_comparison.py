@@ -29,7 +29,7 @@ rows_in_comparison_file = []
 
 with open( output_dir + 'measures.csv', 'a', newline='') as csvfile:
     csvwriter = csv.writer( csvfile, delimiter = ',')
-    csvwriter.writerow(['video', 'segment', 'first-frame', 'seond-frame', 'similarity-score', 'yes-to-no-ratio']) 
+    csvwriter.writerow(['video', 'segment', 'first-frame-id', 'second-frame-id', 'similarity-score', 'yes-to-no-ratio']) 
 
 
 for i in range( 0, len(csv_filenames) -1 ):

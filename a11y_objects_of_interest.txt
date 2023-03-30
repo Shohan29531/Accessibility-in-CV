@@ -2,48 +2,70 @@ Accent Paving
 Barrier Post
 Barrier Stump
 Bench
+Bicycle
+Brick
 Bridge
+Building
 Bus
 Bus Stop
+Car
 Chair
 Closed Sidewalk
+Cloudy
 Counter
+Crosswalk
 Curb
-Different Labels 
-Driveaway
+Day
+Dog
+Driveway(flat)
 Elevator
 Escalator
 Fence
+Fire hydrant
 Flush Door
 Foldout Sign
 Fountain
 Gate
+Guide dog
 Gutter
 Hose
+Jaywalker
 Lamp Post
-Large Curb
-Mail bin
+Mail box
 Maintenance Vehicle
 Motorcycle
+Night
+Obstacle on the sidewalk
+Obstacle on the street
 Parallel Parking Spot
-Parked car
+Paratransit vehicle
+Pedestrian Crossing
+Person
+Person with a disability
 Pillar
 Pole
 Puddle
+Push button
 Railing
+Raining
 Raised Entryway
 Retaining Wall
+Road
 Road Divider
 Road Shoulder
 Roadside Parking
+Sidewalk
 Sidewalk pits 
+Sign
 Sign Post
 Sloped Driveway
 Slopped Curb
 Snow
 Stairs
 Stone Block
+Stop sign
 Street Vendor
+Sunny
 Table
 Tactile Paving
 Traffic Signals
@@ -51,18 +73,18 @@ Train Platform
 Train Tracks
 Trash bins
 Trash on roads
-Tree Branch
-Trees 
+Tree
 Turnstile
 Uncontrolled Crossing
 Uneven Stairs
 Unpaved Road
 Unpaved Sidewalk
+Vegetation
 Wall
 Water leakage
 Water Pipes
+Wet surface
+Wheelchair
+White Cane
 Yard Waste
 Zebra Crossing
-Sign
-Pedestrian Crossing
-White Cane

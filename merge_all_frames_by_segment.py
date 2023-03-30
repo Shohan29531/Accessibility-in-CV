@@ -5,7 +5,7 @@ import pandas as pd
 from natsort import natsorted
 
 
-root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs/"
+root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_v2/"
 
 csv_filenames = []
 csv_filenames_full_path = []
@@ -16,7 +16,7 @@ for filename in glob.iglob(root_dir + '**/*.csv', recursive=True):
         csv_filenames.append( file )
 
 
-new_root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_by_group/"
+new_root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_by_group_v2/"
 
 
 csv_filenames = natsorted( csv_filenames )
@@ -28,7 +28,7 @@ video_id = 1
 segment_id = 1
 
 while True:
-
+    print(video_id, segment_id)
 
     output_file = "video-" + str( video_id ) + "-segment-" + str( segment_id ) + ".csv"
     first_file_name = ""
@@ -38,6 +38,7 @@ while True:
 
     for csv_filename in csv_filenames:
         identity = utility.get_video_identity_from_name( root_dir + csv_filename )
+
 
         if identity['video'] == str( video_id ) and identity['segment'] == str( segment_id ):
             if first_file_found == False:
@@ -64,13 +65,6 @@ while True:
          continue
                                  
     df = pd.read_csv( new_root_dir + output_file )
-
-    df = df.drop( df[ 
-        (df.Question == "What type of disability does the person have, if any?" ) |
-        (df.Question == "What is the weather like in the scene?") |
-        (df.Question == "How many males are there in the scene?") |
-        (df.Question == "How many females are there in the scene?")
-        ].index)
 
     df.to_csv( new_root_dir + output_file, sep =',', index = False )  
 

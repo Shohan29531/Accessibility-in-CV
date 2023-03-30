@@ -9,14 +9,14 @@ def read_lines(file_name):
 
 
 def make_a11y_questions():
-    lines = read_lines('../a11y_objects_of_interest.txt')
+    lines = read_lines('a11y_objects_of_interest.txt')
     questions = []
 
     for item in lines:
         question_str = "Is there a/an " + item.strip() + " in the scene?\n"
         questions.append( question_str )
 
-    file_object = open('../a11y_questions_of_interest.txt', 'w')
+    file_object = open('a11y_questions_of_interest.txt', 'w')
     file_object.writelines( questions )
     file_object.close()
 
@@ -32,32 +32,43 @@ def get_a11y_questions( a11y_filename ):
 
     return questions    
 
+def get_a11y_objects( a11y_filename ):
+    lines = read_lines( a11y_filename )
 
+    objects = []
+
+    for line in lines:
+        objects.append( line.strip() )
+
+    return objects 
 
 def get_video_identity_from_name( filename ): 
   
     temp = re.findall( r'\d+', filename )
     res = list( map( int, temp ) )
 
-    ## for videos 17 and beyond
-    if( len( res ) ) == 2:
-        res.append( 0 )
-        temp = res[1]
-        
-        #set the segment as 0
-        res[1] = 1
+    # print(res)
 
-        #set the frame
-        res[2] = temp
+    # ## for videos 17 and beyond
+    # if( len( res ) ) == 2:
+
+    #     res.append( 0 )
+    #     temp = res[1]
+        
+    #     #set the segment as 0
+    #     res[1] = 1
+
+    #     #set the frame
+    #     res[2] = temp
 
     return {
-        'video' : str( res[0] ),
-        'segment' : str( res[1] ),
-        'frame': str( res[2] ),
+        'video' : str( res[1] ),
+        'segment' : str( res[2] ),
+        'frame': str( res[3] ),
         'video_name': 
-                "video-" +  str( res[0] ) 
-            + "-segment-" + str( res[1] ) 
-            + "-frame-" + str( res[2] )
+                "video-" +  str( res[1] ) 
+            + "-segment-" + str( res[2] ) 
+            + "-frame-" + str( res[3] )
         }
 
 
@@ -83,7 +94,7 @@ def join_csv_files_first_merge( filename1, filename2, merged_filename ):
     data1 = data1.drop_duplicates()
     data2 = data2.drop_duplicates()
 
-    merged_file = pd.merge( data1, data2, on ='Question', how ='inner' )
+    merged_file = pd.merge( data1, data2, on ='Object', how ='inner' )
     merged_file.to_csv( merged_filename, sep =',', index = False )
 
     
@@ -102,5 +113,5 @@ def join_csv_files( merged_filename, new_filename ):
     data1 = data1.drop_duplicates()
     data2 = data2.drop_duplicates()
 
-    merged_file = pd.merge( data1, data2, on ='Question', how ='inner' )
+    merged_file = pd.merge( data1, data2, on ='Object', how ='inner' )
     merged_file.to_csv( merged_filename, sep =',', index = False )   
