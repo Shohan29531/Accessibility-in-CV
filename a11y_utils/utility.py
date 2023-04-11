@@ -62,13 +62,13 @@ def get_video_identity_from_name( filename ):
     #     res[2] = temp
 
     return {
-        'video' : str( res[1] ),
-        'segment' : str( res[2] ),
-        'frame': str( res[3] ),
+        'video' : str( res[0] ),
+        'segment' : str( res[1] ),
+        'frame': str( res[2] ),
         'video_name': 
-                "video-" +  str( res[1] ) 
-            + "-segment-" + str( res[2] ) 
-            + "-frame-" + str( res[3] )
+                "video-" +  str( res[0] ) 
+            + "-segment-" + str( res[1] ) 
+            + "-frame-" + str( res[2] )
         }
 
 

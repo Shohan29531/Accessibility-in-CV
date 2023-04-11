@@ -5,7 +5,7 @@ import pandas as pd
 from natsort import natsorted
 
 
-root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_v2/"
+root_dir = "/home/touhid/Downloads/new_video_outputs_GPV/"
 
 csv_filenames = []
 csv_filenames_full_path = []
@@ -16,13 +16,12 @@ for filename in glob.iglob(root_dir + '**/*.csv', recursive=True):
         csv_filenames.append( file )
 
 
-new_root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_by_group_v2/"
+new_root_dir = "/home/touhid/Downloads/new_video_outputs_GPV_by_group/"
 
 
 csv_filenames = natsorted( csv_filenames )
 
 # print (csv_filenames)
-
 
 video_id = 1
 segment_id = 1
@@ -57,12 +56,25 @@ while True:
                     utility.join_csv_files( new_root_dir + output_file,
                                             root_dir + csv_filename )
 
+    # if first_file_found == False:
+    #      video_id += 1
+    #      if video_id == 17:
+    #           break
+    #      segment_id = 1
+    #      continue
+
     if first_file_found == False:
-         video_id += 1
-         if video_id == 17:
-              break
-         segment_id = 1
-         continue
+        if segment_id ==10:
+            video_id += 1
+            if video_id == 22:
+                break
+            segment_id = 1
+            continue
+        else:
+            segment_id += 1
+            continue
+
+
                                  
     df = pd.read_csv( new_root_dir + output_file )
 

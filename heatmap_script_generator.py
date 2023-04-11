@@ -5,7 +5,7 @@ import pandas as pd
 from natsort import natsorted
 
 
-root_dir = "/home/touhid/Downloads/acss_videos_elena_outputs_by_group_v2/"
+root_dir = "/home/touhid/Downloads/Lavis Outputs/acss_videos_elena_outputs_by_group/"
 
 csv_filenames = []
 csv_filenames_full_path = []
