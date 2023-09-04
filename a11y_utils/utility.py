@@ -47,20 +47,6 @@ def get_video_identity_from_name( filename ):
     temp = re.findall( r'\d+', filename )
     res = list( map( int, temp ) )
 
-    # print(res)
-
-    # ## for videos 17 and beyond
-    # if( len( res ) ) == 2:
-
-    #     res.append( 0 )
-    #     temp = res[1]
-        
-    #     #set the segment as 0
-    #     res[1] = 1
-
-    #     #set the frame
-    #     res[2] = temp
-
     return {
         'video' : str( res[0] ),
         'segment' : str( res[1] ),
@@ -71,6 +57,25 @@ def get_video_identity_from_name( filename ):
             + "-frame-" + str( res[2] )
         }
 
+
+
+def get_video_identity_from_name_only_segments( filename ): 
+  
+    temp = re.findall( r'\d+', filename )
+    res = list( map( int, temp ) )
+
+    if len( res ) < 3:
+        return False
+    
+    print(res)
+
+    return {
+        'video' : str( res[0] ),
+        'segment' : str( res[1] ),
+        'video_name': 
+                "video-" +  str( res[0] ) 
+            + "-segment-" + str( res[1] ) 
+        }
 
 
 

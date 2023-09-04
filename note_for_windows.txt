@@ -1,0 +1,6 @@
+Follow the linux instructions, 
+-   with latest conda version
+-   install nvidia driver from their site
+-   install the rest of the dependencies as mentioned in the github page
+-   take care of the / and \\ issue with path naming in the two OSes
+-   make sure CUDA is the device for torch, not CPU

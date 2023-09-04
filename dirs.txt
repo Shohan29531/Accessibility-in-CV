@@ -1,2 +1,2 @@
-/home/touhid/Desktop/gpv-1/data_gpv/
-/home/touhid/Desktop/gpv-1/output_gpv/
+E:\\Ubuntu Backups\\Desktop\\gpv-1\\data_gpv
+E:\\Ubuntu Backups\\Desktop\\gpv-1\\output_gpv

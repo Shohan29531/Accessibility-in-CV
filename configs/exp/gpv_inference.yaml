@@ -2,9 +2,9 @@ exp_name: gpv_inference
 
 
 #done
-output_dir: /home/touhid/Desktop/gpv-1/output_gpv # e.g. $HOME/Data/gpv_output_dir
+output_dir: E:\\Ubuntu Backups\\Desktop\\gpv-1\\output_gpv # e.g. $HOME/Data/gpv_output_dir
 #done
-data_dir: /home/touhid/Desktop/gpv-1/data_gpv # e.g $HOME/Data/gpv_data_dir
+data_dir: E:\\Ubuntu Backups\\Desktop\\gpv-1\\data_gpv # e.g $HOME/Data/gpv_data_dir
 
 
 exp_dir: ${output_dir}/${exp_name}
